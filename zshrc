@@ -7,7 +7,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="geometry"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -59,9 +59,9 @@ source $ZSH/oh-my-zsh.sh
 #----------------------
 
 alias ..='cd ..'
-alias rm='rm -i'
-alias mv='mv -i'
-alias mkdir='mkdir -i'
+alias rm='rm'
+alias mv='mv'
+alias mkdir='mkdir'
 alias h='history'
 alias j='jobs -l'
 alias which='type -a'
