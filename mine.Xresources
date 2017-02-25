@@ -1,0 +1,133 @@
+!#################################
+!#            Fonts              #
+!#################################
+
+
+URxvt*font:xft:Inconsolata:pixelsize=15:bold,xft:RobotoMono\ for\ Powerline:pixelsize=14:bold, xft:Inconsolata\ for\ Powerline:pixelsize=14:bold
+URxvt.scrollBar: false
+
+!#################################
+!#         XFT Settings          #
+!#################################
+
+!Xft.antialias: 1
+!Xft.hinting: 1
+!Xft.rgba: rgb
+
+!#################################
+!#        Color Settings         #
+!#################################
+
+
+! Colors
+!*.foreground:  #A8A8A8
+*.foreground:  #EFF0EB
+*.background:  #24292E
+*.cursorColor: #ffffff
+
+! Black
+*.color0:      #000000
+*.color8:      #323232
+
+! Red
+*.color1:      #d73928
+*.color9:      #ff7b6b
+
+! Green
+*.color2:      #4e994d
+*.color10:     #83d182
+
+! Yellow
+*.color3:      #ffd24a
+*.color11:     #ffff7c
+
+! Blue
+*.color4:      #6194b8
+*.color12:     #9fcef0
+!*.color12: rgb:5c/5c/ff
+
+! Magenta
+*.color5:      #d0d0ff
+*.color13:     #ffffff
+
+! Cyan
+*.color6:      #6e9cbe
+*.color14:     #a0cef0
+
+! White
+*.color7:      #ffffff
+*.color15:     #ffffff
+
+! Bold, Italic, Underline
+*.colorBD:     #e6e1dc
+!*.colorIT:
+!*.colorUL:
+
+!#C6C6C6
+
+!#################################
+!#        rxvt Configs           #
+!#################################
+
+! Perl extensions
+URxvt.perl-ext: default,clipboard,url-select,resize-font
+
+! Font resize on the fly
+URxvt.keysym.C-minus	resize-font:smaller
+URxvt.keysym.C-plus	resize-font:bigger
+URxvt.keysym.C-equal	resize-font:reset
+
+! Yankable URLs
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher: /usr/bin/xdg-open
+URxvt.url-select.underline: true
+
+URxvt.clipboard.copycmd:  xsel -ib
+URxvt.clipboard.pastecmd: xsel -ob
+
+!#################################
+!#      Rofi Config              #
+!#################################
+
+rofi.modi:                           run
+rofi.sidebar-mode:                   true
+rofi.terminal:                       rxvt-unicode
+rofi.ssh-client:                     ssh
+rofi.ssh-command:                    {terminal} -e "{ssh-client} {host}"
+rofi.opacity:                        70
+rofi.width:                          40
+rofi.lines:                          5
+rofi.columns:                        1
+rofi.font:                           Inconsolata 10
+rofi.fg:                             #5294E2
+rofi.bg:                             #5d729f
+rofi.fg-active:                      #34405a
+rofi.fg-urgent:                      #34405a
+rofi.hlfg-active:                    #5e73a0
+rofi.hlfg-urgent:                    #5e73a0
+rofi.bg-active:                      #34405a
+rofi.bg-urgent:                      #34405a
+rofi.hlbg-active:                    #5d729f
+rofi.hlbg-urgent:                    #5d729f
+rofi.bgalt:                          #5671a0
+rofi.hlfg:                           #34405a
+rofi.hlbg:                           #34405a
+rofi.bc:                             #789ee1
+! State:           'bg',     'fg',     'bgalt',  'hlbg',   'hlfg'
+rofi.color-normal: #353944,  #FFFFFF,  #353944,  #5294E2,  #FFFFFF
+!rofi.color-normal: #353944,  #FFFFFF,  #353944,  #5294E2,  #FFFFFF
+!rofi.color-normal: #353944,  #FFFFFF,  #353944,  #5294E2,  #FFFFFF
+
+!                  'background', 'border'
+rofi.color-window: #353944,      #404552
+rofi.bw:                             10
+rofi.location:                       0
+rofi.padding:                        20
+rofi.levenshtein-sort:               true
+rofi.case-sensitive:                 false
+rofi.fuzzy:                          false
+rofi.line-margin:                    2
+rofi.separator-style:                solid
+rofi.hide-scrollbar:                 true
+rofi.markup-rows:                    false
+rofi.scrollbar-width: 8

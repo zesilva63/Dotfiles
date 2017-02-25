@@ -7,7 +7,9 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="geometry"
+#GEOMETRY_SYMBOL_EXIT_VALUE="▲"
+
+ZSH_THEME="geometry/geometry"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -52,14 +54,17 @@ ZSH_THEME="geometry"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
+#plugins=(zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
 #ALIASES
 #----------------------
 
+
+alias terceiro='cd ~/Desktop/terceiro'
 alias ..='cd ..'
-alias rm='rm'
+alias rm -r='sudo rm -r'
 alias mv='mv'
 alias mkdir='mkdir'
 alias h='history'
