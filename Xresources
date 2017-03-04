@@ -2,26 +2,37 @@
 !#            Fonts              #
 !#################################
 
+URxvt*font:     xft:Inconsolata:pixelsize=15:bold, \
+                xft:RobotoMono for Powerline:pixelsize=10:bold, \
+                xft:Inconsolata for Powerline:pixelsize=10:bold, \
+                xft:Monaco for Powerline:size=10:antialias=true, \
+                xft:Droid Sans Mono:size=10:antialias=true, \
+                xft:DejaVu Sans Mono:style=Book:antialias=true:size=10, \
+                xft:RobotoMono for Powerline:pixelsize=10, \
+                xft:DejaVu Sans Mono for Powerline:pixelsize=10, \
+                xft:Ubuntu Mono derivate Powerline:pixelsize=10, \
+                xft:PowerlineSymbols:pixelsize=10, \
+                xft:FontAwesome:pixelsize=10
 
-URxvt*font:xft:Inconsolata:pixelsize=15:bold,xft:RobotoMono\ for\ Powerline:pixelsize=14:bold, xft:Inconsolata\ for\ Powerline:pixelsize=14:bold
 URxvt.scrollBar: false
+
+
 
 !#################################
 !#         XFT Settings          #
 !#################################
 
-!Xft.antialias: 1
-!Xft.hinting: 1
-!Xft.rgba: rgb
+Xft.dpi: 96
+
+
 
 !#################################
 !#        Color Settings         #
 !#################################
 
-
-! Colors
-!*.foreground:  #A8A8A8
+! Color of commands you write
 *.foreground:  #EFF0EB
+
 *.background:  #24292E
 *.cursorColor: #ffffff
 
@@ -44,7 +55,6 @@ URxvt.scrollBar: false
 ! Blue
 *.color4:      #6194b8
 *.color12:     #9fcef0
-!*.color12: rgb:5c/5c/ff
 
 ! Magenta
 *.color5:      #d0d0ff
@@ -63,7 +73,7 @@ URxvt.scrollBar: false
 !*.colorIT:
 !*.colorUL:
 
-!#C6C6C6
+
 
 !#################################
 !#        rxvt Configs           #
@@ -74,7 +84,7 @@ URxvt.perl-ext: default,clipboard,url-select,resize-font
 
 ! Font resize on the fly
 URxvt.keysym.C-minus	resize-font:smaller
-URxvt.keysym.C-plus	resize-font:bigger
+URxvt.keysym.C-plus	    resize-font:bigger
 URxvt.keysym.C-equal	resize-font:reset
 
 ! Yankable URLs
@@ -84,6 +94,8 @@ URxvt.url-select.underline: true
 
 URxvt.clipboard.copycmd:  xsel -ib
 URxvt.clipboard.pastecmd: xsel -ob
+
+
 
 !#################################
 !#      Rofi Config              #
