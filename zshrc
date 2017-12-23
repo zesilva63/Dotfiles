@@ -54,7 +54,7 @@ ZSH_THEME="geometry/geometry"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
-#plugins=(zsh-syntax-highlighting)
+plugins=(zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -81,7 +81,9 @@ alias lu='ls -ltur'
 alias ll="ls -lv --group-directories-first"
 alias lm='ll | more'
 alias la='ll -a'
-
+alias o='open_command'
+alias v='vim'
+alias s='subl3'
 #PS1='\[\033[01;36m\]\u @\[\033[01;30m\] \w\[\033[01;34\] [\t]\[\033[01;32m] $ \[\033[00m\]'
 
 # User configuration
