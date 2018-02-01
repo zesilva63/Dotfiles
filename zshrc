@@ -1,31 +1,22 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.gem/ruby/2.5.0/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/zesilva63/.oh-my-zsh
+export ZSH=/home/zesilva63/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #GEOMETRY_SYMBOL_EXIT_VALUE="▲"
 
-ZSH_THEME="geometry/geometry"
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+ZSH_THEME=""
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+ DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
+ export UPDATE_ZSH_DAYS=7
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
@@ -57,10 +48,16 @@ plugins=(git)
 plugins=(zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
+# Auto completion for zsh 
+#source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+
+autoload -U promptinit; promptinit
+prompt pure
+
 
 #ALIASES
 #----------------------
-
 
 alias terceiro='cd ~/Desktop/terceiro'
 alias ..='cd ..'
@@ -84,6 +81,13 @@ alias la='ll -a'
 alias o='open_command'
 alias v='vim'
 alias s='subl3'
+alias gc='git commit -m'
+alias gps='git push'
+alias gpl='git pull'
+alias gs='git status'
+alias ga='git add'
+
+
 #PS1='\[\033[01;36m\]\u @\[\033[01;30m\] \w\[\033[01;34\] [\t]\[\033[01;32m] $ \[\033[00m\]'
 
 # User configuration
@@ -114,3 +118,4 @@ export LANG=en_US.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+

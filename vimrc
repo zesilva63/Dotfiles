@@ -1,6 +1,5 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -13,21 +12,7 @@ call pathogen#infect()             " use pathogen
 
 
 
-" ############# SYNTASTIC ####################
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-
-
-"########### NORD COLORSCHEME/LIGHTLINE ##############
-
+"### NORD COLORSCHEME/LIGHTLINE ###
 Plugin 'arcticicestudio/nord-vim'            " Import of nord theme to use on lightline
 
 Plugin 'itchyny/lightline.vim'               " Import of lightline itself
@@ -37,17 +22,11 @@ set laststatus=2                             " Prevent top bar to appear
 
 
 
-"########### CTRL-P  ##############
-set runtimepath^=~/.vim/bundle/ctrlp.vim    " Path to CtrlP, plugin to open files in buffer
-
-
-
 "Load the rest of Plugins by Vundle
 Plugin 'justinmk/vim-syntax-extra'      " Enhance C definitions 
 Plugin 'majutsushi/tagbar'              " Search for tags
 Plugin 'slim-template/vim-slim.git'     " Provides syntax highlighting
 Plugin 'dag/vim2hs'                     " Provide Haskell Highlighting
-Plugin 'Valloric/YouCompleteMe'         " Allow an efficient autocomplete system
 Plugin 'lilydjwg/colorizer'             " Gives color when color code is writen 
 Plugin 'junegunn/goyo.vim'              " Changes screen to clean mode
 Plugin 'Raimondi/delimitMate'           " Create close bracket automatically
@@ -57,17 +36,17 @@ Plugin 'luochen1990/rainbow'            " Colorize the matching
 let g:rainbow_active = 1  
 
 
-
-
 call vundle#end()
-syntax enable
 filetype plugin indent on
 
+syntax enable
 
 "#################################
 "#            Options            #
 "#################################
+set matchpairs+=<:>
 
+set smartcase
 
 set background=dark         " set the background to dark mode
 
@@ -93,3 +72,8 @@ nnoremap <leader><space> :nohlsearch<CR>
 
 "Activating neocomplete for autocompletion
 let g:neocomplete#enable_at_startup = 1
+
+let g:enable_bold_font = 1
+let g:enable_italic_font = 1
+
+colorscheme peachpuff
