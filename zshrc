@@ -49,11 +49,15 @@ plugins=(zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 # Auto completion for zsh 
-#source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/tmux.plugins.zsh
 
 autoload -U promptinit; promptinit
+
+PURE_PROMPT_SYMBOL_COLOR=green
+
 prompt pure
+
 
 
 #ALIASES
@@ -119,3 +123,6 @@ export LANG=en_US.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+
+# added by Pew
+source $(pew shell_config)
